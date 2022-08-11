@@ -1,0 +1,2 @@
+valve ON	valve OFF
+30.022850	30.072650
