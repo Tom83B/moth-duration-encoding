@@ -2,7 +2,7 @@
 
 Supporting code, Jupyter notebooks and data for the manuscript **Stimulus duration encoding occurs early in the moth olfactory pathway** [(Barta et al., 2022)][biorxiv]
 
-The folder `data` contains the used experimental data. In text files are spike trains and stimulus onset / offset timings. `.abf` files contain recordings of the local field potential (LFP) or photo-ionization detector (PID) signal (folders `base recordings` and `PID`).
+The folder `data` contains the used experimental data. In text files are spike trains and stimulus onset / offset timings. `.abf` files contain recordings of the local field potential (LFP) or photo-ionization detector (PID) signal (folders `data/base recordings` and `data/PID`).
 
 The associated scripts and Jupyter notebooks are in Python 3.8.5 and the following libraries were used:
 * numpy (1.20.3)
