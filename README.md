@@ -10,6 +10,7 @@ The associated scripts and Jupyter notebooks are in Python 3.8.5 and the followi
 * scikit-learn (0.24.2)
 * pandas (1.3.3)
 * matplotlib (3.4.2)
+* brian2 (2.4.2)
 * neo (0.9.0) - for reading `.abf` files
 
 Jupyter notebooks reproduce the figures in the manuscript. Python scripts provide helpful functions used throughout the Jupyter notebooks and generate simulation and analysis data, which are saved in `data/generated`
