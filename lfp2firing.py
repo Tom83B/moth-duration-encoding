@@ -15,7 +15,7 @@ from utils import resample, filter_expon, filter_from_coefs
     
 def fit_model(txt_file, abf_file, taus, shapes):
     tarr_universal = np.arange(-1,8,0.002)
-    rec = StabilityDurationRecording(txt_file, abf_file, filtered=True, downsample=True, cutoff=15)
+    rec = StabilityDurationRecording(txt_file, abf_file, filtered=True, downsample=True, cutoff=15, sig=0)
     
     X = {}
     y = {}
@@ -56,7 +56,7 @@ def fit_model(txt_file, abf_file, taus, shapes):
 
     dt = tarr[1] - tarr[0]
 
-    reg = LinearRegression()
+    reg = LinearRegression(fit_intercept=False)
 
     resp_mask_train = (tarrs[dur] > -1) & (tarrs[dur] < 2)
     X_all = X[2][resp_mask_train]
@@ -111,8 +111,9 @@ if __name__ == '__main__':
     # load files and remove too noisy recordings and recordings with artifacts
     intact_txt, intact_abf = intact_files(leave_out=[7,11,17,32])
     
-    shapes = [1, 1, 1, 1]
-    taus_all = [0, 4e-2, 0.8]
+    shapes = [1, 1, 1]
+    taus_all = [0, 29e-3, 0.628]
+    taus_all = [0, 31e-3, 0.635]
     
     run_all(taus_all, shapes, 'full')
     run_all(taus_all[:-1], shapes[:-1], 'reduced')
